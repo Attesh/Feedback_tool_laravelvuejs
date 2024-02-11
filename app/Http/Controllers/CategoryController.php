@@ -1,0 +1,24 @@
+<?php
+
+
+namespace App\Http\Controllers;
+
+use App\Models\Category;
+use Illuminate\Http\Request;
+
+class CategoryController extends Controller
+{
+    /**
+     * Get all categories.
+     *
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function index()
+    {
+
+        
+        $categories = Category::all();
+
+        return response()->json($categories);
+    }
+}
